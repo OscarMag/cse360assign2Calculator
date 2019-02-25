@@ -22,25 +22,25 @@ public class Calculator
 	//The getTotal method returns the current total.
 	public int getTotal () 
 	{
-		return 0;
+		return total;
 	}
 	
 	//The add method adds 'value' to 'total'.
 	public void add (int value) 
 	{
-		
+		total += value;
 	}
 	
 	//The subtract method subtracts 'value' from 'total'.
 	public void subtract (int value) 
 	{
-		
+		total -= value;
 	}
 	
 	//The multiply method multiplies 'total' by 'value'.
 	public void multiply (int value) 
 	{
-		
+		total *= value;
 	}
 	
 	/*The divide method divides 'total' by 'value' using integer division.
@@ -48,7 +48,10 @@ public class Calculator
 	*/
 	public void divide (int value) 
 	{
-		
+		if (value == 0)
+			total = 0;
+		else 
+			total /= value;
 	}
 	
 	//The getHistory method returns a history of all actions as a string.
